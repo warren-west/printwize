@@ -29,6 +29,7 @@ footer a {
     color: #eee;
     text-decoration: underline;
     text-decoration-color: #778;
+    padding-left: 4px;
 }
 
 .header-container {
@@ -306,5 +307,9 @@ video {
         box-shadow: #ddd 2px 0px 3px;
         border-radius: 15px 0 0 15px;
         object-fit: cover;
+    }
+
+    footer a:hover {
+        color: #778;
     }
 }
