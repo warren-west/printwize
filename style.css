@@ -30,6 +30,38 @@ footer a {
     text-decoration: underline;
     text-decoration-color: #778;
     padding-left: 4px;
+    position: relative;
+}
+
+footer p:first-child {
+    font-size: 0.68rem;
+    font-weight: 500;
+    margin: 0.9em 0 1.8em 0;
+}
+
+footer p {
+    margin: 0.6em 0;
+}
+
+footer a::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: 2px;
+    width: calc(100% - 4px);
+    height: 1.3px;
+    background: linear-gradient(to left, #46ccea, #00759c);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #94d4e3;
+    text-decoration: none;
+}
+
+footer a:hover::after {
+    opacity: 1;
 }
 
 .header-container {
@@ -78,7 +110,8 @@ video {
     object-fit: cover;
 }
 
-.specialising-header, .located-header {
+.specialising-header,
+.located-header {
     color: var(--main-header-color);
     margin-bottom: 2rem;
     font-size: 1.3em;
@@ -126,7 +159,8 @@ video {
     z-index: 1;
     font-weight: 700;
     font-size: 1.65rem;
-    user-select: none; /* Standard syntax: Prevent select */
+    user-select: none;
+    /* Standard syntax: Prevent select */
     position: absolute;
     left: 13%;
     filter: drop-shadow(1px 2px 2px #bba);
@@ -179,7 +213,9 @@ video {
     filter: drop-shadow(1px 3px 3px #888);
 }
 
-.text-founded, .text-by, .text-ralph {
+.text-founded,
+.text-by,
+.text-ralph {
     font-size: 0.84rem;
     margin-bottom: 0.5rem;
 }
@@ -242,7 +278,7 @@ video {
         margin: 1em 0 1em 0;
         height: auto;
     }
-    
+
     .path-scale {
         transform: scale(0.8, 0.8);
     }
@@ -285,7 +321,8 @@ video {
         height: 600px;
     }
 
-    .specialising-header, .located-header {
+    .specialising-header,
+    .located-header {
         color: var(--main-header-color);
         margin-bottom: 3rem;
         font-size: 1.8em;
@@ -307,9 +344,5 @@ video {
         box-shadow: #ddd 2px 0px 3px;
         border-radius: 15px 0 0 15px;
         object-fit: cover;
-    }
-
-    footer a:hover {
-        color: #778;
     }
 }
